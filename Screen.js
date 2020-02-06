@@ -1,16 +1,18 @@
-let workMode = true
+let awakeMode: boolean = true
 input.onButtonPressed(Button.A, function () {
-    workMode = false
+    awakeMode = false
 })
 input.onButtonPressed(Button.B, function () {
-    workMode = true
+    awakeMode = true
+
 })
 basic.forever(function () {
-    if (workMode) {
-  
+    if (awakeMode) {
 
+        basic.showString("AWAKE")
+
+    } else {
+
+        basic.showString("Sleep!")
     }
-    else {
-
-}
 })
